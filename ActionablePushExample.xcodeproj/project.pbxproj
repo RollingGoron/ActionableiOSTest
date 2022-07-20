@@ -11,7 +11,41 @@
 		F20A6E5F2887283300C21E83 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20A6E5E2887283300C21E83 /* ContentView.swift */; };
 		F20A6E612887283400C21E83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F20A6E602887283400C21E83 /* Assets.xcassets */; };
 		F20A6E652887283400C21E83 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F20A6E642887283400C21E83 /* Preview Assets.xcassets */; };
+		F27AB5632887B2C300294413 /* Asterism.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F27AB5602887B2BD00294413 /* Asterism.framework */; platformFilter = ios; };
+		F27AB5642887B2C300294413 /* Asterism.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F27AB5602887B2BD00294413 /* Asterism.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F27AB5662887B2DB00294413 /* PushRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27AB5652887B2DB00294413 /* PushRequest.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F27AB55F2887B2BD00294413 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F27AB55A2887B2BD00294413 /* Asterism.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F208B4B22380ADD3006B6B8F;
+			remoteInfo = Asterism;
+		};
+		F27AB5612887B2BD00294413 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F27AB55A2887B2BD00294413 /* Asterism.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F29C3E6C238EEA92005B5855;
+			remoteInfo = Example;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F26FBAFA2887B26500DDDB50 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F27AB5642887B2C300294413 /* Asterism.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		F20A6E592887283300C21E83 /* ActionablePushExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ActionablePushExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -20,6 +54,8 @@
 		F20A6E602887283400C21E83 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F20A6E622887283400C21E83 /* ActionablePushExample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ActionablePushExample.entitlements; sourceTree = "<group>"; };
 		F20A6E642887283400C21E83 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F27AB55A2887B2BD00294413 /* Asterism.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Asterism.xcodeproj; path = ../Asterism/Asterism.xcodeproj; sourceTree = "<group>"; };
+		F27AB5652887B2DB00294413 /* PushRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F27AB5632887B2C300294413 /* Asterism.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -36,8 +73,10 @@
 		F20A6E502887283300C21E83 = {
 			isa = PBXGroup;
 			children = (
+				F27AB55A2887B2BD00294413 /* Asterism.xcodeproj */,
 				F20A6E5B2887283300C21E83 /* ActionablePushExample */,
 				F20A6E5A2887283300C21E83 /* Products */,
+				F26FBAF72887B26500DDDB50 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,6 +96,7 @@
 				F20A6E602887283400C21E83 /* Assets.xcassets */,
 				F20A6E622887283400C21E83 /* ActionablePushExample.entitlements */,
 				F20A6E632887283400C21E83 /* Preview Content */,
+				F27AB5652887B2DB00294413 /* PushRequest.swift */,
 			);
 			path = ActionablePushExample;
 			sourceTree = "<group>";
@@ -69,6 +109,22 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		F26FBAF72887B26500DDDB50 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F27AB55B2887B2BD00294413 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F27AB5602887B2BD00294413 /* Asterism.framework */,
+				F27AB5622887B2BD00294413 /* Example.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -79,6 +135,7 @@
 				F20A6E552887283300C21E83 /* Sources */,
 				F20A6E562887283300C21E83 /* Frameworks */,
 				F20A6E572887283300C21E83 /* Resources */,
+				F26FBAFA2887B26500DDDB50 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -115,12 +172,35 @@
 			mainGroup = F20A6E502887283300C21E83;
 			productRefGroup = F20A6E5A2887283300C21E83 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = F27AB55B2887B2BD00294413 /* Products */;
+					ProjectRef = F27AB55A2887B2BD00294413 /* Asterism.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				F20A6E582887283300C21E83 /* ActionablePushExample */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		F27AB5602887B2BD00294413 /* Asterism.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Asterism.framework;
+			remoteRef = F27AB55F2887B2BD00294413 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F27AB5622887B2BD00294413 /* Example.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = Example.app;
+			remoteRef = F27AB5612887B2BD00294413 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		F20A6E572887283300C21E83 /* Resources */ = {
@@ -141,6 +221,7 @@
 			files = (
 				F20A6E5F2887283300C21E83 /* ContentView.swift in Sources */,
 				F20A6E5D2887283300C21E83 /* ActionablePushExampleApp.swift in Sources */,
+				F27AB5662887B2DB00294413 /* PushRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,7 +358,7 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 12.4;
@@ -313,7 +394,7 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 12.4;
