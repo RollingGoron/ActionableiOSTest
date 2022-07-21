@@ -4,6 +4,9 @@ import Asterism
 
 // no changes in your AppDelegate class
 class AppDelegate: NSObject, UIApplicationDelegate {
+  
+  static let keychain = KeychainSwift()
+  
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
     UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { granted, error in
       if let error = error {
@@ -16,6 +19,8 @@ class AppDelegate: NSObject, UIApplicationDelegate {
       }
     }
     UNUserNotificationCenter.current().delegate = self
+    
+    Self.keychain.set("1234567890", forKey: "1", withAccess: .accessibleWhenUnlocked)
     return true
   }
   
@@ -60,7 +65,13 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
     
     switch response.actionIdentifier {
     case "Yes":
-      let pushRequest = PushRequest(dataToSend: "Yes")
+      guard let value = Self.keychain.get("1") else {
+        let pushRequest = PushRequest(dataToSend: "Unable to access Keychain")
+        Networking.send(pushRequest)
+        completionHandler()
+        return
+      }
+      let pushRequest = PushRequest(dataToSend: value)
       Networking.send(pushRequest)
     case "No":
       let pushRequest = PushRequest(dataToSend: "No")
